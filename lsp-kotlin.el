@@ -1,13 +1,13 @@
-;;; lsp-kotlin.el --- Racket support for lsp-mode -*- lexical-binding: t -*-
+;;; lsp-kotlin.el --- Kotlin support for lsp-mode -*- lexical-binding: t -*-
 (require 'lsp-mode)
 
 (defcustom lsp-kotlin-executable-path "racket"
-  "Path to Racket executable."
+  "Path to Kotlin executable."
   :group 'lsp-kotlin
   :type 'string)
 
 (defcustom lsp-kotlin-server-args '()
-  "Extra arguments for the Racket language server."
+  "Extra arguments for the Kotlin language server."
   :group 'lsp-kotlin
   :type '(repeat string))
 
