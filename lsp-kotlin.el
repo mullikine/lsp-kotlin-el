@@ -1,7 +1,7 @@
 ;;; lsp-kotlin.el --- Kotlin support for lsp-mode -*- lexical-binding: t -*-
 (require 'lsp-mode)
 
-(defcustom lsp-kotlin-executable-path "racket"
+(defcustom lsp-kotlin-executable-path "kotlin"
   "Path to Kotlin executable."
   :group 'lsp-kotlin
   :type 'string)
@@ -13,7 +13,7 @@
 
 (defun lsp-kotlin--server-command ()
   "Generate the language server startup command."
-  `(,lsp-kotlin-executable-path "--lib" "racket-langserver" ,@lsp-racket-server-args))
+  `(,lsp-kotlin-executable-path "--lib" "kotlin-langserver" ,@lsp-kotlin-server-args))
 
 (defvar lsp-kotlin--config-options `())
 
@@ -25,7 +25,7 @@
                   :initialized-fn (lambda (workspace)
                                     (with-lsp-workspace workspace
                                       (lsp--set-configuration
-                                       `(:kotlin ,lsp-racket--config-options))))))
+                                       `(:kotlin ,lsp-kotlin--config-options))))))
 
 (provide 'lsp-kotlin)
 ;;; lsp-kotlin.el ends here

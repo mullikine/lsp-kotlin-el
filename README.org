@@ -1,4 +1,4 @@
-Kotlin support for lsp-mode using [[hhttps://pkgs.kotlin-lang.org/package/racket-langserver][racket-langserver]].
+Kotlin support for lsp-mode using [[hhttps://pkgs.kotlin-lang.org/package/kotlin-langserver][kotlin-langserver]].
 
 ** Installation
 
